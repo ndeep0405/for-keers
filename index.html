@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Keers 💗</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Pacifico&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh; overflow-x:hidden; color:#5d4052;
+  font-family:"DM Sans",sans-serif;
+  background:linear-gradient(135deg,#fff4f7 0%,#ffe7ee 48%,#f8eaff 100%);
+}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative}
+.glow{position:fixed;border-radius:50%;filter:blur(4px);opacity:.5;pointer-events:none}
+.g1{width:240px;height:240px;background:#ffd1df;top:-70px;left:-70px}
+.g2{width:280px;height:280px;background:#e8d1ff;right:-100px;bottom:-100px}
+
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.heart{position:absolute;font-size:18px;opacity:0;animation:floatUp linear infinite}
+@keyframes floatUp{
+  0%{transform:translateY(20px) scale(.7) rotate(-10deg);opacity:0}
+  15%{opacity:.75} 100%{transform:translateY(-105vh) scale(1.15) rotate(18deg);opacity:0}
+}
+
+.card{
+  width:min(720px,100%); position:relative; z-index:2;
+  padding:38px 24px 30px; border:1px solid rgba(255,255,255,.8);
+  background:rgba(255,255,255,.66); backdrop-filter:blur(18px);
+  border-radius:34px; box-shadow:0 25px 80px rgba(132,76,106,.16);
+  text-align:center;
+}
+.small{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#aa718d;font-weight:700}
+h1{font-family:Pacifico,cursive;font-size:clamp(40px,8vw,68px);font-weight:400;color:#c45880;margin:7px 0 4px}
+.subtitle{font-size:15px;color:#876778;margin-bottom:22px}
+
+.cat-wrap{height:250px;display:flex;align-items:center;justify-content:center;position:relative}
+.cat{position:relative;width:205px;height:205px;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-7px)}}
+.ear{position:absolute;width:62px;height:65px;background:#fff7f7;border:4px solid #734e5e;top:8px;border-radius:22px 30px 10px 30px;z-index:0}
+.ear:after{content:"";position:absolute;inset:11px;background:#ffc6d5;border-radius:15px 22px 6px 22px}
+.e1{left:22px;transform:rotate(-20deg)} .e2{right:22px;transform:scaleX(-1) rotate(-20deg)}
+.head{position:absolute;left:24px;top:38px;width:157px;height:139px;border:4px solid #734e5e;background:#fffafa;border-radius:48% 48% 44% 44%;z-index:1}
+.eye{position:absolute;width:13px;height:19px;background:#533947;border-radius:50%;top:57px}
+.eye:after{content:"";position:absolute;width:4px;height:5px;background:white;border-radius:50%;left:3px;top:3px}
+.le{left:42px}.re{right:42px}
+.blush{position:absolute;width:27px;height:12px;background:#ffc4d2;border-radius:50%;top:78px;opacity:.7}
+.bl1{left:14px}.bl2{right:14px}
+.nose{position:absolute;left:73px;top:79px;width:13px;height:10px;background:#d96b88;border-radius:50% 50% 55% 55%}
+.mouth{position:absolute;left:71px;top:89px;width:18px;height:12px;border-bottom:3px solid #734e5e;border-radius:0 0 50% 50%}
+.body{position:absolute;left:47px;top:150px;width:112px;height:50px;background:#fffafa;border:4px solid #734e5e;border-radius:55px 55px 30px 30px;z-index:0}
+.flower{position:absolute;right:-10px;top:91px;width:72px;height:100px;z-index:4;transform:rotate(8deg)}
+.stem{position:absolute;width:5px;height:87px;background:#6fa276;left:36px;top:17px;transform:rotate(-9deg);border-radius:5px}
+.leaf{position:absolute;width:29px;height:14px;background:#75a97a;border-radius:100% 0 100% 0;top:54px;left:25px;transform:rotate(-28deg)}
+.bloom{position:absolute;left:18px;top:0;width:48px;height:48px}
+.petal{position:absolute;width:25px;height:25px;background:#ff9fba;border:2px solid #e9789b;border-radius:50%}
+.p1{left:11px;top:0}.p2{left:23px;top:11px}.p3{left:11px;top:22px}.p4{left:0;top:11px}
+.center{position:absolute;left:16px;top:16px;width:17px;height:17px;border-radius:50%;background:#ffd96a}
+
+.note-area{display:grid;gap:10px;margin:2px auto 18px;max-width:570px}
+.note{
+  padding:13px 18px;border-radius:18px;background:#fff;
+  box-shadow:0 8px 22px rgba(127,76,103,.08);
+  opacity:0;transform:translateY(15px) scale(.98);
+  animation:show .7s forwards;
+}
+.note:nth-child(1){animation-delay:.2s}.note:nth-child(2){animation-delay:.8s}
+.note:nth-child(3){animation-delay:1.4s}.note:nth-child(4){animation-delay:2s}
+@keyframes show{to{opacity:1;transform:none}}
+.note strong{color:#bd5279}
+
+.final{
+  margin-top:18px;padding:20px 18px;border-radius:23px;
+  background:linear-gradient(135deg,#fff,#fff1f5);
+  border:1px solid #ffd5e1;
+}
+.final p{line-height:1.7;font-size:15px}
+.signature{font-family:Pacifico,cursive;font-size:24px;color:#c45880;margin-top:8px}
+.btn{
+  border:0;border-radius:999px;padding:14px 25px;margin-top:18px;
+  background:#d45f86;color:white;font:600 15px "DM Sans",sans-serif;
+  cursor:pointer;box-shadow:0 10px 25px rgba(212,95,134,.28);
+  transition:.2s; 
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 13px 30px rgba(212,95,134,.35)}
+.answer{display:none;margin-top:16px;color:#b84d73;font-weight:600;animation:show .5s forwards}
+.footer{font-size:11px;color:#a98899;margin-top:20px;letter-spacing:.5px}
+
+@media(max-width:480px){
+ .card{padding:30px 15px 24px;border-radius:27px}
+ .cat-wrap{height:235px}.flower{right:-2px}
+ .note{font-size:14px}
+}
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div>
+<div class="hearts" id="hearts"></div>
+
+<main class="page">
+<section class="card">
+  <div class="small">A little something for you</div>
+  <h1>I'm sorry, Keers 🥺</h1>
+  <div class="subtitle">Please listen to this tiny cat for a moment... 🐾</div>
+
+  <div class="cat-wrap">
+    <div class="cat" aria-label="cute cat holding flowers">
+      <div class="ear e1"></div><div class="ear e2"></div>
+      <div class="body"></div>
+      <div class="head">
+        <div class="eye le"></div><div class="eye re"></div>
+        <div class="blush bl1"></div><div class="blush bl2"></div>
+        <div class="nose"></div><div class="mouth"></div>
+      </div>
+      <div class="flower">
+        <div class="stem"></div><div class="leaf"></div>
+        <div class="bloom"><i class="petal p1"></i><i class="petal p2"></i><i class="petal p3"></i><i class="petal p4"></i><i class="center"></i></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="note-area">
+    <div class="note">🥺 <strong>I'm really sorry.</strong></div>
+    <div class="note">💗 I know I messed up, and I genuinely regret it.</div>
+    <div class="note">🌷 Please forgive me. I promise I won't do it again.</div>
+    <div class="note">🫶 I don't want a silly mistake to come between us.</div>
+  </div>
+
+  <div class="final">
+    <p><strong>Keers, you mean a lot to me.</strong><br>
+    I may not always get everything right, but I never want to intentionally hurt you.
+    I'm truly sorry for what I did. Please give this idiot one more chance to make it right. 🥹❤️</p>
+    <div class="signature">— Your idiot ❤️</div>
+  </div>
+
+  <button class="btn" onclick="forgive()">Forgive me? 🥺🌷</button>
+  <div class="answer" id="answer">*cat is now crying happy tears* 😭💗<br>Thank you, Keers. I promise I'll do better. 🫂</div>
+  <div class="footer">made with a lot of sorry & a little bit of cat magic ✨</div>
+</section>
+</main>
+
+<script>
+const hearts=document.getElementById('hearts');
+const symbols=['♡','♥','🌸','✦','💗'];
+for(let i=0;i<28;i++){
+  const h=document.createElement('span');
+  h.className='heart'; h.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  h.style.left=Math.random()*100+'%';
+  h.style.bottom=(-5-Math.random()*30)+'%';
+  h.style.animationDuration=(6+Math.random()*7)+'s';
+  h.style.animationDelay=(Math.random()*7)+'s';
+  h.style.fontSize=(12+Math.random()*13)+'px';
+  hearts.appendChild(h);
+}
+function forgive(){
+  document.getElementById('answer').style.display='block';
+  for(let i=0;i<16;i++){
+    const h=document.createElement('span');
+    h.className='heart';h.textContent='💗';
+    h.style.left=(35+Math.random()*30)+'%';
+    h.style.bottom='25%';h.style.animationDuration=(2+Math.random()*2)+'s';
+    hearts.appendChild(h);
+  }
+}
+</script>
+</body>
+</html>
